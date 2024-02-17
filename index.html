@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="blue">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Tickets</title>
+
+    <!-- Favicon -->
+
+    <!-- Tailwind & Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Inter & Raleway Font -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Font Awesome -->
+
+
+    <!-- Customizing Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'green-bg': '#1DD1001A',
+                        'green-font': '#1DD100',
+                        'green-border': '#1DD10066',
+                        
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <header class="w-full lg:w-[1170px] md:w-[380px] mx-auto font-raleway ">
+        <!-- Navbar Section-->
+        <nav class="my-6 lg:my-10 w-full">
+            <div class="navbar flex justify-between">
+                <div class="">
+                    <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li>
+                        <a>About</a>
+                        </li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                    </div>
+                    <a class="btn btn-ghost text-2xl lg:text-4xl pl-0 font-extrabold font-">Bus - Tickets</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-base font-semibold">
+                        <li><a class="font-medium">Home</a></li>
+                        <li><a class="font-medium">About</a></li>
+                        <li><a class="font-medium">Destination</a></li>
+                        <li><a class="font-medium">Search</a></li>
+                    </ul>
+                </div>
+                <div class="bg-green-bg flex justify-evenly items-center gap-2 lg:w-32 w-20 lg:h-14 h-6 p-6 rounded-xl border border-green-border">
+                    <p class="text-green-font font-bold">Bus</p>
+                <img src="images/bus-icon.png" alt="" class="">
+                </div>
+            </div>
+        </nav>
+
+        <!-- Banner Section -->
+        <section>
+            <div style="background: url(./images/banner.png), lightgray 50%; background-repeat: no-repeat; background-size: cover; background-position: center;" class="h-[300px] lg:w-[1170px]  w-[380px] md:w-[380px] lg:h-[600px] rounded-[32px] relative left-4 lg:left-0">
+                <div class="lg:absolute flex flex-col justify-center items-center space-y-4 lg:space-y-9 mt-8 lg:mt-28 lg:w-full">
+                    <h3 class=" mt-6 text-white text-2xl lg:text-6xl font-extrabold text-center">End-to-End Travel with <br><span class="text-green-font">ASM Paribahan</span></h3>
+                    <p class=" text-sm lg:text-base text-white text-[#00000099] w-[250px] lg:w-[480px] mt-2 text-center">Book your ticket to adventure with ease and convenience through our hassle-free bus booking platform.</p>
+                    <div class="mt-5">
+                        <button class="btn bg-green-font lg:text-xl text-sm border-none font-bold lg:w-40 w-28 lg:h-16 h-10">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+        </section>
+    </header>
+
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/alpha-clash.js"></script>
+</body>
+
+</html>
