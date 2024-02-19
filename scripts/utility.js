@@ -15,6 +15,10 @@ function setElementInnerTextById (elementId, value){
     element.innerText = value;
 }
 
+function removeAttribute (elementId) {
+    const element = document.getElementById(elementId);
+    element.removeAttribute('disabled');
+}
 
 
 // ------------------------------------
