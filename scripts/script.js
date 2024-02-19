@@ -1,11 +1,14 @@
 
 const buttonElements = document.querySelectorAll('.seat');
+
 let updatedSeatNumber = 0;
 
 for (const element of buttonElements) {
 
     element.addEventListener('click', function(){
         updatedSeatNumber++;
+        
+
 
     // How many Seats are Left section
     const totalSeats = parseFloat(getElementInnerTextById('forty-seats'));
@@ -21,6 +24,8 @@ for (const element of buttonElements) {
         }
 
         // change the color
+        element.setAttribute('disabled', true);
+        element.style.backgroundColor = '#1DD100';
         setBackgroundColorById(element.innerText);
 
 
@@ -33,6 +38,8 @@ for (const element of buttonElements) {
 
         // Adding Seats to the Section
         seatName(element.innerText);
+        // disableButton(element)
+        // addButtonClickListeners();
         
         
         // Updating Total Price
@@ -41,7 +48,6 @@ for (const element of buttonElements) {
 
         // Updating Grand Price
         getTotalPrice(totalPrice);
-
 
     }
 

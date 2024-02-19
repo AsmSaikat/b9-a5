@@ -9,8 +9,6 @@ const applyButton = document.getElementById('coupon-button').addEventListener('c
 
     if(couponInput === 'NEW15') {
 
-        const discount = parseFloat(getElementById('discount-price')) * .15;
-
         const totalDiscount = totalPrice - (totalPrice * .15);
         setElementInnerTextById('total-discounted-price', totalDiscount);
         setElementInnerTextById('grand-total',totalDiscount)
@@ -22,7 +20,6 @@ const applyButton = document.getElementById('coupon-button').addEventListener('c
     }
 
     else if (couponInput === 'Couple 20'){
-        const discount = parseFloat(getElementById('discount-price')) * .15;
 
         const totalDiscount = totalPrice - (totalPrice * .20);
         setElementInnerTextById('total-discounted-price', totalDiscount);
