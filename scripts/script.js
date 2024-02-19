@@ -7,7 +7,6 @@ for (const element of buttonElements) {
     element.addEventListener('click', function(){
         updatedSeatNumber++;
 
-
     // How many Seats are Left section
     const totalSeats = parseFloat(getElementInnerTextById('forty-seats'));
 
@@ -18,7 +17,7 @@ for (const element of buttonElements) {
     else {
 
         if(totalSeats === 37) {
-            removeAttribute('coupon-button');
+            removeAttributeDisabled('coupon-button');
         }
 
         // change the color
@@ -30,22 +29,28 @@ for (const element of buttonElements) {
         const remainingSeats = totalSeats - 1;
 
         setElementInnerTextById('forty-seats', remainingSeats)
-
+        
 
         // Adding Seats to the Section
         seatName(element.innerText);
         
+        
         // Updating Total Price
         const totalPrice = updatedSeatNumber * 550;
         setElementInnerTextById('total-price', totalPrice)
-    }
 
+        // Updating Grand Price
+        getTotalPrice(totalPrice);
+
+
+    }
 
 
     // Updating Grand Total Price
 
 
     })
+
 
 }
 

@@ -10,16 +10,34 @@ function getElementInnerTextById (elementId) {
     return element
 }
 
+function getElementById (elementId) {
+    const element = document.getElementById(elementId);
+    return element
+}
+
 function setElementInnerTextById (elementId, value){
     const element = document.getElementById(elementId);
     element.innerText = value;
 }
 
-function removeAttribute (elementId) {
+function removeAttributeDisabled (elementId) {
     const element = document.getElementById(elementId);
     element.removeAttribute('disabled');
 }
+function setAttributeDisabled (elementId) {
+    const element = document.getElementById(elementId);
+    element.setAttribute('disabled', true);
+}
 
+function removeAttributeHidden (elementId) {
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden');
+}
+
+function hideElementById(elementId) {
+    const element = document.getElementById(elementId);
+    element.style.display = 'none';
+}
 
 // ------------------------------------
 
