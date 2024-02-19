@@ -42,7 +42,7 @@
 
 <body class="mx-auto">
 
-    <header class="lg:w-[1170px] md:w-[380px] w-full mx-auto font-raleway ">
+    <header id="header" class="lg:w-[1170px] md:w-[380px] w-full mx-auto font-raleway">
         <!-- Navbar Section-->
         <nav class="my-6 lg:my-10 w-full">
             <div class="navbar flex justify-between">
@@ -84,7 +84,9 @@
                     <div class="lg:w-full w-[300px]">
                         <h1 class=" text-white text-2xl lg:text-6xl font-extrabold text-center">End-to-End Travel with<span class="text-green-font block lg:mt-6">ASM Travels</span></h1>
                             <p class=" text-sm lg:text-base text-white text-[#00000099] lg:w-[480px] mt-4 mx-auto">Book your ticket to adventure with ease and convenience through our hassle-free bus booking platform.</p>
-                            <button class="btn hover:bg-green-600 bg-green-font lg:text-xl text-sm border-none font-bold lg:w-40 w-28 lg:h-16 h-10 mt-5">Buy Tickets</button>
+                            <a href="#seatSelection">
+                                <button class="btn hover:bg-green-600 bg-green-font lg:text-xl text-sm border-none font-bold lg:w-40 w-28 lg:h-16 h-10 mt-5">Buy Tickets</button>
+                            </a>
                     </div>
                 </div>
             </div>
@@ -97,7 +99,7 @@
     <main class="">
 
         <!-- Best Offers for You Section -->
-        <section class="lg:w-[1170px] md:w-[380px] mx-auto">
+        <section id="bestOffers" class="lg:w-[1170px] md:w-[380px] mx-auto">
             <h3 class="text-2xl lg:text-4xl font-bold text-center mt-10 lg:mt-20 lg:mb-12 mb-8">Best Offers for You</h3>
 
             <!-- Offer Cards -->
@@ -143,7 +145,7 @@
 
         </section>
 
-        <section class="bg-[#F7F8F8] lg:w-full mx-auto h-[2000px] mt-10 border border-green-border rounded-t-[88px]">
+        <section id="seatSelection" class="bg-[#F7F8F8] lg:w-full mx-auto h-[2000px] mt-10 border border-green-border rounded-t-[88px] ">
             <!-- ASM Paribahan -->
                 <div class="pt-4 lg:mb-12 mb-6">
                     <h3 class="text-2xl lg:text-4xl font-bold text-center lg:mt-10 mt-5 mb-4">ASM Paribahan</h3>
@@ -448,16 +450,16 @@
                         <!-- Form -->
                         <div class="w-[433px] flex flex-col gap-5 mt-10">
                             <p class="text-base font-bold">Passenger Name *</p>
-                            <input type="text" name="" id="" placeholder="Enter Your Name" class="rounded-lg pl-2 border-2 h-16">
+                            <input id="passenger-name" type="text" name=""  placeholder="Enter Your Name" class="rounded-lg pl-2 border-2 h-16">
                         </div>
                         <div class="w-[433px] flex flex-col gap-5 mt-5">
                             <p class="text-base font-bold">Phone Number *</p>
-                            <input type="text" name="" id="" placeholder="Enter Your Phone Number" class="rounded-lg pl-2 border-2 h-16">
+                            <input type="number" name="" id="passenger-number" placeholder="Enter Your Phone Number" class="rounded-lg pl-2 border-2 h-16">
                         </div>
                         <div class="w-[433px] flex flex-col gap-5">
                             <p class="text-base font-bold">Email ID</p>
-                            <input type="text" name="" id="" placeholder="Enter Your Email ID" class="rounded-lg pl-2 border-2 h-16">
-                            <button class="btn bg-[#1DD100] h-16 text-white">Apply</button>
+                            <input type="email" name="" id="passenger-email" placeholder="Enter Your Email ID" class="rounded-lg pl-2 border-2 h-16">
+                            <button onclick="successPage()" id="success-button" class="btn bg-[#1DD100] h-16 text-white">Apply</button>
                         </div>
                         <div class="flex justify-around w-[430px] mt-5">
                             <a class="underline">Terms and Conditions</a>
@@ -475,6 +477,30 @@
 
 
 
+
+        </section>
+
+        <!-- Success Section -->
+        <section id="successSection" class="h-[100vh] flex justify-center items-center hidden">
+
+            <div class="bg-[#F2F1F1] w-[1440px] h-[856px] flex justify-center items-center rounded-3xl">
+
+                <div class="bg-white w-[718px] h-[481px] text-center font-inter flex flex-col justify-center items-center rounded-3xl">
+                    <img src="images/success.png" alt="">
+                    <br>
+                    <h3 class="text-2xl font-bold text-green-600">SUCCESS</h3>
+
+                    <br>
+                    <p class="text-xl text-[#4A4A4A] font-semibold">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.</p>
+                    <br>
+                    <p class="text-xl text-[#4A4A4A]">Shortly you will find a confirmation in your email.</p>
+                    <br>
+                    <button onclick="continueButton()" id="continue-button" class="btn text-white bg-green-700">Continue</button>
+                    
+
+                </div>
+
+            </div>
 
         </section>
 

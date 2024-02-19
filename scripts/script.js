@@ -7,8 +7,6 @@ for (const element of buttonElements) {
 
     element.addEventListener('click', function(){
         updatedSeatNumber++;
-        
-
 
     // How many Seats are Left section
     const totalSeats = parseFloat(getElementInnerTextById('forty-seats'));
@@ -38,27 +36,44 @@ for (const element of buttonElements) {
 
         // Adding Seats to the Section
         seatName(element.innerText);
-        // disableButton(element)
-        // addButtonClickListeners();
         
         
         // Updating Total Price
         const totalPrice = updatedSeatNumber * 550;
         setElementInnerTextById('total-price', totalPrice)
+        setElementInnerTextById('grand-total',totalPrice)
 
         // Updating Grand Price
         getTotalPrice(totalPrice);
 
     }
 
-
-    // Updating Grand Total Price
-
-
     })
-
-
 }
+
+
+function successPage() {
+    const passengerName = document.getElementById('passenger-name').value;
+
+    console.log();
+    console.log(passengerName);
+    const passengerNumber = document.getElementById('passenger-number').value;
+
+    if (passengerName === "" || passengerNumber=== "" ) {
+        alert('Please fill the field with *');
+        return;
+    }
+    else {
+    }
+    hideElementId('header');
+    hideElementId('bestOffers'); 
+    hideElementId('seatSelection');
+    showElementId('successSection'); 
+}
+function continueButton(){
+    location.reload();
+}
+
 
 
 
