@@ -52,11 +52,21 @@ for (const element of buttonElements) {
 }
 
 
+function seatUpdate() {
+    if (updatedSeatNumber !== 0) {
+    successPage();
+    }
+    
+    else {
+        alert('Please select at least one seat!')
+    }
+    
+}
+
+
 function successPage() {
     const passengerName = document.getElementById('passenger-name').value;
 
-    console.log();
-    console.log(passengerName);
     const passengerNumber = document.getElementById('passenger-number').value;
 
     if (passengerName === "" || passengerNumber=== "" ) {
@@ -65,11 +75,14 @@ function successPage() {
     }
     else {
     }
+
     hideElementId('header');
     hideElementId('bestOffers'); 
     hideElementId('seatSelection');
+    hideElementId('footer');
     showElementId('successSection'); 
 }
+
 function continueButton(){
     location.reload();
 }

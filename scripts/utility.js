@@ -23,6 +23,10 @@ function removeAttributeDisabled (elementId) {
     const element = document.getElementById(elementId);
     element.removeAttribute('disabled');
 }
+function addAttributeDisabled (elementId) {
+    const element = document.getElementById(elementId);
+    element.setAttribute('disabled');
+}
 
 function removeAttributeHidden (elementId) {
     const element = document.getElementById(elementId);

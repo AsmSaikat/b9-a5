@@ -32,7 +32,7 @@ const applyButton = document.getElementById('coupon-button').addEventListener('c
     }
 
     else {
-        alert('Please Give the Valid Coupon!')
+        alert('Please Give a Valid Coupon!')
     }
 
 })
