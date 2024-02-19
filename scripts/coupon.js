@@ -6,6 +6,7 @@ function getTotalPrice (total) {
 
 const applyButton = document.getElementById('coupon-button').addEventListener('click', function (){
     const couponInput = getElementById('coupon-input').value;
+    document.getElementById('coupon-input').value = '';
 
     if(couponInput === 'NEW15') {
 
@@ -32,7 +33,7 @@ const applyButton = document.getElementById('coupon-button').addEventListener('c
     }
 
     else {
-        alert('Please Give a Valid Coupon!')
+        alert('Please Give a Valid Coupon!');
     }
 
 })
