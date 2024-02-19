@@ -1,3 +1,47 @@
+
+function setBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-green-400');
+}
+
+
+function getElementInnerTextById (elementId) {
+    const element = document.getElementById(elementId).innerText;
+    return element
+}
+
+function setElementInnerTextById (elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
+
+
+
+// ------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function removeBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-orange-400');
+}
+
+
+
 function hideElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.add('hidden');
@@ -15,16 +59,6 @@ function playKeyAudio(){
 function showElementById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('hidden');
-}
-
-function setBackgroundColorById(elementId){
-    const element = document.getElementById(elementId);
-    element.classList.add('bg-orange-400');
-}
-
-function removeBackgroundColorById(elementId){
-    const element = document.getElementById(elementId);
-    element.classList.remove('bg-orange-400');
 }
 
 
